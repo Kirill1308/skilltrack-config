@@ -13,6 +13,7 @@ spring:
         retry.backoff.ms: 500
         enable.idempotence: false
     consumer:
+      group-id: notification-service
       auto-offset-reset: earliest
       properties:
         request.timeout.ms: 60000
