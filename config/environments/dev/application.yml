@@ -43,6 +43,4 @@ app:
   notification:
     topic: notification-events
   url:
-#    base: http://localhost:9090
-#    Prevent spam
-    base: http://app.skilltrack.dev
+    base: http://localhost:9090
