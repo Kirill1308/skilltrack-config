@@ -1,0 +1,25 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: '{cipher}e79e85b93a344bb7a683ecbecc695031ab313f223ece98e2b1fef24f69175164'
+      password: '{cipher}d40d41a97ecbe4099222f792eefde3b19f73fc6e66b2478eb0cb263190c19ec1'
+      database: skilltrack_notification
+      authentication-database: admin
+      auto-index-creation: true
+
+  mail:
+    host: '{cipher}3458ef50062ffc71f5537552ddfcaea045c81d5e1569c3c4cf506af33e58e26a'
+    port: 587
+    username: '{cipher}09974953e3eb76bee35f931d890612823e710f58a6491151427b1fe3a19a5029b599370793026bac1f72b42db762c2f9095ae3dad58b28401aa9d5f5b5b047ea'
+    password: '{cipher}6ca07e90b093e54ccc1f5a20bb9007ca25cdb5eabd349f2ebbae13a8c5fbd6c455352120780191460619a4a7a406b2e1'
+    properties:
+      mail:
+        debug: false
+        transport:
+          protocol: smtp
+        smtp:
+          auth: true
+          starttls:
+            enable: true

@@ -1,0 +1,46 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: '{cipher}1d2e99b0330a98f81419504dc65b9a68bbbce981d089a19047cd22a280e2fcbc'
+    password: '{cipher}1d2e99b0330a98f81419504dc65b9a68bbbce981d089a19047cd22a280e2fcbc'
+    virtual-host: /
+    listener:
+      simple:
+        default-requeue-rejected: false
+        retry:
+          enabled: true
+          initial-interval: 1000
+          max-attempts: 3
+          multiplier: 1.5
+          max-interval: 10000
+        acknowledge-mode: auto
+
+logging:
+  level:
+    com.popov: DEBUG
+    org.springframework.cloud.netflix.eureka: INFO
+    org.springframework.kafka: INFO
+    feign: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/application.log
+    max-size: 10MB
+    max-history: 7
+
+app:
+  rabbitmq:
+    exchange: skilltrack.exchange
+    dead-letter-exchange: skilltrack.dead-letter.exchange
+    queues:
+      notification: notification.queue
+      notification-dead-letter: notification.dead-letter.queue
+    routing-keys:
+      notification: notification.#
+      dead-letter: deadletter
