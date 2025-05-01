@@ -33,14 +33,3 @@ logging:
     name: logs/application.log
     max-size: 10MB
     max-history: 7
-
-app:
-  rabbitmq:
-    exchange: skilltrack.exchange
-    dead-letter-exchange: skilltrack.dead-letter.exchange
-    queues:
-      notification: notification.queue
-      notification-dead-letter: notification.dead-letter.queue
-    routing-keys:
-      notification: notification.#
-      dead-letter: deadletter

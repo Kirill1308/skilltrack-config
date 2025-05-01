@@ -1,0 +1,9 @@
+messaging:
+  exchange: skilltrack.exchange
+  dead-letter-exchange: skilltrack.dead-letter.exchange
+  queues:
+    notification: notification.queue
+    notification-dead-letter: notification.dead-letter.queue
+  routing-keys:
+    notification: user.#
+    dead-letter: deadletter

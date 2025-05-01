@@ -1,0 +1,5 @@
+messaging:
+  exchange: skilltrack.exchange
+  routing-keys:
+    user-created: user.created
+    password-reset: user.password-reset
