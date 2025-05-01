@@ -5,3 +5,26 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
+      routes:
+        - id: skilltrack-auth-service
+          uri: lb://skilltrack-auth-service
+          predicates:
+            - Path=/api/auth/**
+
+        - id: skilltrack-user-service
+          uri: lb://skilltrack-user-service
+          predicates:
+            - Path=/api/user-profiles/**,/api/user-skills/**,/api/skills/**,/api/certifications/**
+
+        - id: skilltrack-notification-service
+          uri: lb://skilltrack-notification-service
+          predicates:
+            - Path=/api/notifications/**,/api/preferences/**
+security:
+  open-endpoints:
+    - /api/auth/login
+    - /api/auth/register
+    - /api/auth/refresh-token
+    - /api/auth/forgot-password
+    - /api/auth/reset-password
+    - /api/auth/verify-email/**
