@@ -33,6 +33,6 @@ logging:
 #  pattern:
 #    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   pattern:
-    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){yellow} %clr([%thread]){magenta} %clr(%-5level){red} %clr(%logger{36}){cyan} - %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} %clr([%thread]){magenta} %clr(%-5level) %clr(%logger{36}){cyan} - %msg%n"
   file:
     name:
