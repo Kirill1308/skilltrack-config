@@ -2,4 +2,4 @@ security:
   jwt:
     secret: '{cipher}b5d2279f984af7aa663f1a84fac1dcf937071f642bb1f802facc4e9f0bf4b447d93ef7a368118febe957dc745fabeb06d0c47ddccef9bfcf65db80654adabaf2be4eafb4f7c56b72a99a933b2cba954d'
     expiration: 24  # hours
-    refreshExpiration: 168  # 7 days
+    refreshExpiration: 168  # 7 days in hours

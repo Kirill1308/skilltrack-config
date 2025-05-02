@@ -2,6 +2,3 @@ spring:
   config:
     import:
       - security.yml
-      - database.yml
-  jpa:
-    open-in-view: false
