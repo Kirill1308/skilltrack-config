@@ -30,9 +30,6 @@ logging:
     org.hibernate.SQL: DEBUG
     org.flywaydb: INFO
     org.springframework.cloud.config: INFO
-#  pattern:
-#    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   pattern:
+    # Date, thread, log level, logger name, and message
     console: "%d{yyyy-MM-dd HH:mm:ss} %clr([%thread]){magenta} %clr(%-5level) %clr(%logger{36}){cyan} - %msg%n"
-  file:
-    name:
