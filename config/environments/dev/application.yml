@@ -28,7 +28,11 @@ logging:
     com.skilltrack: DEBUG
     feign: DEBUG
     org.hibernate.SQL: DEBUG
+    org.flywaydb: INFO
+    org.springframework.cloud.config: INFO
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){yellow} %clr([%thread]){magenta} %clr(%-5level){red} %clr(%logger{36}){cyan} - %msg%n"
   file:
     name:
