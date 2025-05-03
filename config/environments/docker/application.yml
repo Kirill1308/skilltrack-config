@@ -1,0 +1,35 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+
+spring:
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: '{cipher}1d2e99b0330a98f81419504dc65b9a68bbbce981d089a19047cd22a280e2fcbc'
+    password: '{cipher}1d2e99b0330a98f81419504dc65b9a68bbbce981d089a19047cd22a280e2fcbc'
+    virtual-host: /
+    listener:
+      simple:
+        default-requeue-rejected: false
+        retry:
+          enabled: true
+          initial-interval: 1000
+          max-attempts: 3
+          multiplier: 1.5
+          max-interval: 10000
+        acknowledge-mode: auto
+
+logging:
+  level:
+    root: WARN
+    web: INFO
+    com.skilltrack: DEBUG
+    feign: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.flywaydb: INFO
+    org.springframework.cloud.config: INFO
+  pattern:
+    # Date, thread, log level, logger name, and message
+    console: "%d{yyyy-MM-dd HH:mm:ss} %clr([%thread]){magenta} %clr(%-5level) %clr(%logger{36}){cyan} - %msg%n"

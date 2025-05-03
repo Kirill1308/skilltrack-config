@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://user-db:5432/skilltrack_user
+    username: '{cipher}589dc3d84e25c6e407abdf9c018c1c78f45812222c1af355c74fbe8125e314d2'
+    password: '{cipher}589dc3d84e25c6e407abdf9c018c1c78f45812222c1af355c74fbe8125e314d2'
+    driver-class-name: org.postgresql.Driver
