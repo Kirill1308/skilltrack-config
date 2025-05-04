@@ -7,6 +7,6 @@ spring:
 
 minio:
   bucket: skilltrack-docker-files
-  url: http://localhost:9000
+  url: http://minio:9000
   access-key: '{cipher}ee6c87c0e834bcb4fd9b078183e54a70fd17ea71bce4054002b5f61d3040e9e4'
   secret-key: '{cipher}ee6c87c0e834bcb4fd9b078183e54a70fd17ea71bce4054002b5f61d3040e9e4'
